@@ -127,15 +127,17 @@
                                 @endforeach
                             @endisset
 
-                            <tr class="table-dark">
+                             <tr class="table-dark">
                                 <td><b>Total</b></td>
 
-                                @foreach ($total_per_bulan as $item)
-                                    <td style="text-align: right;">
-                                        <b>{{ $item }}</b>
-                                    </td>
-                                @endforeach
-                                <td style="text-align: right;"><b>{{ $total }}</b></td>
+                                @isset($total_per_bulan)
+                                    @foreach ($total_per_bulan as $item)
+                                        <td style="text-align: right;">
+                                            <b>{{ $item }}</b>
+                                        </td>
+                                    @endforeach
+                                    <td style="text-align: right;"><b>{{ $total }}</b></td>
+                                @endisset
                             </tr>
                         </tbody>
                     </table>
