@@ -91,7 +91,7 @@ class homeController extends Controller
                 }
             }
 
-            dd($total_per_bulan);
+           
             $total = array_sum($total_per_bulan);
 
 
